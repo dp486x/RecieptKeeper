@@ -1,0 +1,81 @@
+<div class="panel-content">
+	<div class="main-title-sec">
+		<div class="row">
+			<div class="col-md-3 column">
+				<div class="heading-profile">
+					<h2>Syntax Highlight</h2>
+					<span>Welcome back, John</span>
+				</div>
+			</div>
+			<div class="col-md-9 column">
+				<div class="top-bar-chart">
+					<div class="bar-chart-details">
+						<p>New User</p>
+						<h5>17,561</h5>
+					</div>
+					<span id="new-orders" class="sparkline">4,5,6,7,6,5,4,3,3,4</span>
+				</div>
+				<div class="top-bar-chart">
+					<div class="bar-chart-details">
+						<p>My Balance</p>
+						<h5>$21,561.01</h5>
+					</div>
+					<span id="my-balance" class="sparkline">4,3,6,3,8,6,4,3,3,4</span>
+				</div>
+				<div class="quick-btn-title">
+					<a href="javascript:void(0)" title=""><i class="fa fa-plus"></i> New Tasks</a>
+					<a href="javascript:void(0)" title=""><i class="fa fa-cloud-upload"></i> Upload Files</a>
+				</div>
+			</div>
+		</div>
+	</div><!-- Heading Sec -->
+	<ul class="breadcrumbs">
+		<li><a href="javascript:void(0)" title="">Home</a></li>
+		<li>Syntax Highlight</li>
+	</ul>
+	<div class="main-content-area">
+		<div class="row">
+			<div class="col-md-12">
+				<pre class="code language-html">
+					The following code block is what I would like to syntax highlight:
+					&lt;pre&gt;
+					// Define our Function
+					function checkMeaningOfLife ( decimal, success ) {
+					if ( parseInt(decimal,10) === 42 ) {
+					window.console.log(success);
+				}
+			};
+			// Define our Variables
+			var	str = 'The meaning of life is true',
+			decimal = 42.00;
+			// Fire our Function
+			checkMeaningOfLife(decimal,success);
+			&lt;/pre&gt;
+		</pre>
+
+		<pre class="code language-html">
+			&lt;pre class="language-html"&gt;
+			&lt;span&gt;
+			I'm a span element. I hope I've been escaped properly... as otherwise I will be :-( and the browser will be :-O
+			&lt;/span&gt;
+			&lt;/pre&gt;
+		</pre>
+
+		<pre class="code language-javascript">
+			var $content = $('&lt;div&gt;This is an upcoming code black:&lt;code class="language-javascript"&gt;// I am some code&lt;/code&gt;&lt;/div&gt;');
+			$content.syntaxHighlight(); // will highlight the code block found inside
+		</pre>
+
+		<pre class="code language-html">
+			&lt;!-- Initialise jQuery Syntax Highlighter --&gt;
+			&lt;script type="text/javascript"&gt;
+			$.SyntaxHighlighter.init({
+			'wrapLines':false
+		});
+		&lt;/script&gt;
+	</pre>
+
+</div>
+</div>
+</div>
+</div><!-- Panel Content -->

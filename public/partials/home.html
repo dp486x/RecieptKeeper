@@ -1,0 +1,505 @@
+<div id="live-chat">
+	<div class="clearfix chat-header">
+		<a class="chat-close">-</a>
+		<h4>Labrina Scholar</h4>
+		<span class="chat-message-counter">3</span>
+	</div>
+	<div class="chat" style="display:none;">
+		<div class="chat-history">
+			<div class="chat-message">
+				<img src="http://placehold.it/40x40" alt="" width="32" height="32" />
+				<div class="chat-message-content">
+					<span class="chat-time">11:54</span>
+					<h5>John Doe</h5>
+					<p>Lorem ipsum dolor. Error, explicabo quasi ratione odio dolorum harum.</p>
+				</div> <!-- end chat-message-content -->
+			</div> <!-- end chat-message -->
+			<div class="chat-message">
+				<img src="http://placehold.it/40x40" alt="" width="32" height="32" />
+				<div class="chat-message-content">
+					<span class="chat-time">12:43</span>
+					<h5>Marco Biedermann</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div> <!-- end chat-message-content -->
+			</div> <!-- end chat-message -->
+			<div class="chat-message">
+				<img src="http://placehold.it/40x40" alt="" width="32" height="32" />
+				<div class="chat-message-content">
+					<span class="chat-time">12:23</span>
+					<h5>John Doe</h5>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+				</div> <!-- end chat-message-content -->
+			</div> <!-- end chat-message -->
+		</div> <!-- end chat-history -->
+		<p class="chat-feedback">Your partner is typing… <img src="images/typing-loading.gif" alt="" /></p>
+		<form action="#" method="post">
+			<fieldset>
+				<input type="text" placeholder="Type your message…" autofocus>
+				<input type="hidden">
+			</fieldset>
+		</form>
+	</div> <!-- end chat -->
+</div> <!-- end live-chat -->
+<div class="panel-content">
+	<div class="main-title-sec">
+		<div class="row">
+			<div class="col-md-3 column">
+				<div class="heading-profile">
+					<h2>Dashboard</h2>
+					<span>Welcome back, John</span>
+				</div>
+			</div>
+			<div class="col-md-9 column">
+				<div id="reportrange" class="date-range">
+					<i class="fa fa-calendar-o"></i>
+					<span></span> <b class="caret"></b>
+				</div>
+				<div class="quick-btn-title">
+					<a href="javascript:void(0)" title=""><i class="fa fa-plus"></i> New Tasks</a>
+					<a href="javascript:void(0)" title=""><i class="fa fa-cloud-upload"></i> Upload Files</a>
+				</div>
+			</div>
+		</div>
+	</div><!-- Heading Sec -->
+	<ul class="breadcrumbs">
+		<li><a href="javascript:void(0)" title="">Home</a></li>
+		<li><a href="javascript:void(0)" title="">Dashboard</a></li>
+	</ul>
+	<div class="main-content-area">
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<div class="widget">
+					<div class="quick-report-widget">
+						<span>New Visits</span>
+						<h4>21,069</h4>
+						<i class="fa fa-clock-o red-bg"></i>
+						<h5>Total Visits : 9,34,001</h5>
+					</div>
+				</div><!-- Widget -->
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="widget">
+					<div class="quick-report-widget">
+						<span>New Signups</span>
+						<h4>1,346</h4>
+						<i class="fa fa-user skyblue-bg"></i>
+						<h5>Total Users : 22,344</h5>
+					</div>
+				</div><!-- Widget -->
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="widget">
+					<div class="quick-report-widget">
+						<span>Todays Earning</span>
+						<h4>2,345</h4>
+						<i class="fa fa-usd green-bg"></i>
+						<h5>Total Earning : $345,00</h5>
+					</div>
+				</div><!-- Widget -->
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div class="widget">
+					<div class="quick-report-widget">
+						<span>Real Visitors</span>
+						<h4 class="number">123</h4>
+						<i class="fa fa-area-chart blue-bg"></i>
+						<h5>Total Visitors : 235,670</h5>
+					</div>
+				</div><!-- Widget -->
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="widget pattern">
+					<div class="widget-title">
+						<h3>Statistics Chart</h3>
+						<span> distance stats...</span>
+						<div class="widget-controls">
+							<span class="close-content"><i class="fa fa-trash-o"></i></span>
+							<span class="expand-content"><i class="fa fa-expand"></i></span>
+							<span class="refresh-content"><i class="fa fa-refresh"></i></span>
+						</div><!-- Widget Controls -->
+					</div>
+					<div class="statistic-chart">
+						<div class="server-status">
+							<div class="server">
+								<p>Your last activity is posted 4 hours ago</p>
+								<span class="server1"><i></i> Server 1</span>
+								<span class="server2"><i></i> Server 2</span>
+							</div>
+							<div id="serverload-chart"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="widget">
+					<div class="quick-flat-chart">
+						<span>$340 <i>+125.00%</i></span>
+						<p class="red-bg">MONDAY</p>
+						<div class="graph-container">
+							<div id="chart" style="height:230px"></div>
+						</div>
+						<div class="flat-chart-detail">
+							<ul>
+								<li><span>Market</span><p>$12,234,000</p></li>
+								<li><span>Referrel</span><p>$50,335.000</p></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="widget">
+					<div class="quick-all-report">
+						<div class="row">
+							<div class="col-md-2">
+								<div class="quick-all">
+									<span id="quick-visit" class="sparkline">1,5,2,7,9,6,7,11,9,13,12,15,14,18</span>
+									<h4>3,403</h4>
+									<p>Visits</p>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="quick-all">
+									<span id="quick-view" class="sparkline">6,4,7,2,9,8,2,5,4</span>
+									<h4>67,456</h4>
+									<p>Page Views</p>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="quick-all">
+									<span id="quick-page" class="sparkline">7,3,5,7,8,9,3,5,6</span>
+									<h4>67.9</h4>
+									<p>Page / Visits</p>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="quick-all">
+									<span id="quick-time" class="sparkline">7,5,2,6,7,8,5,8,7</span>
+									<h4>00:02:03</h4>
+									<p>Average Time</p>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="quick-all">
+									<span id="quick-returning" class="sparkline">4,6,7,8,3,5,8,6,5</span>
+									<h4>25%</h4>
+									<p>Returning Visits</p>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="quick-all">
+									<span id="quick-rate" class="sparkline">2,7,7,11,9,13,12,5,7</span>
+									<h4>66.1%</h4>
+									<p>Bounce Rate</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5">
+				<div class="widget">
+					<div class="widget-title">
+						<h3>Support Tickets</h3>
+						<span> all tickets here...</span>
+						<div class="widget-controls">
+							<span class="close-content"><i class="fa fa-trash-o"></i></span>
+							<span class="expand-content"><i class="fa fa-expand"></i></span>
+							<span class="refresh-content"><i class="fa fa-refresh"></i></span>
+						</div><!-- Widget Controls -->
+					</div>
+					<div class="support-ticket-sec">
+						<ul class="support-ticket" id="ticket-scroll">
+							<li>
+								<div class="tckt-status"><span class="removed red-bg">REMOVED</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#AA-235</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">Buy on themeforest this great template...</a>
+									<h6>Added by Dmitry Ivaniuk</h6>
+								</div>
+							</li>
+							<li>
+								<div class="tckt-status"><span class="new green-bg">NEW</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#AA-457</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">Goto Shop and Buy Beer</a>
+									<h6>Added by John Doe</h6>
+								</div>
+							</li>
+							<li>
+								<div class="tckt-status"><span class="new green-bg">NEW</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#AJ-569</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">There is no error in this Template</a>
+									<h6>Added by Dina John</h6>
+								</div>
+							</li>
+							<li>
+								<div class="tckt-status"><span class="done blue-bg">DONE</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#JH-784</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">How can i Buy this Admin?</a>
+									<h6>Added by Bolliona</h6>
+								</div>
+							</li>
+							<li>
+								<div class="tckt-status"><span class="removed red-bg">REMOVED</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#LD-567</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">Finest Admin ever of themeforest</a>
+									<h6>Added by Nikonilina</h6>
+								</div>
+							</li>
+							<li>
+								<div class="tckt-status"><span class="removed red-bg">REMOVED</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#AA-235</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">Buy on themeforest this great template...</a>
+									<h6>Added by Dmitry Ivaniuk</h6>
+								</div>
+							</li>
+							<li>
+								<div class="tckt-status"><span class="new green-bg">NEW</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#AA-457</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">Goto Shop and Buy Beer</a>
+									<h6>Added by John Doe</h6>
+								</div>
+							</li>
+							<li>
+								<div class="tckt-status"><span class="new green-bg">NEW</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#AJ-569</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">There is no error in this Template</a>
+									<h6>Added by Dina John</h6>
+								</div>
+							</li>
+							<li>
+								<div class="tckt-status"><span class="done blue-bg">DONE</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#JH-784</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">How can i Buy this Admin?</a>
+									<h6>Added by Bolliona</h6>
+								</div>
+							</li>
+							<li>
+								<div class="tckt-status"><span class="removed red-bg">REMOVED</span><i>23/02/2013</i></div>
+								<div class="tckt-number"><span>#LD-567</span></div>
+								<div class="ticket-info">
+									<a href="javascript:void(0)" title="">Finest Admin ever of themeforest</a>
+									<h6>Added by Nikonilina</h6>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="widget no-padding blank">
+							<div class="weather-widget">
+								<div class="widget-controls">
+									<span class="refresh-content"><i class="fa fa-refresh"></i></span>
+								</div><!-- Widget Controls -->
+								<canvas id="rain" width="64" height="64"></canvas>
+								<div class="weather-infos">
+									<span class="weather-tem">75</span>
+									<h3>Cloudy Skyies<i>Sicklervilte, New Jersey</i></h3>
+									<div class="weather-date skyblue-bg">
+										<span>MAY<strong>21</strong></span>
+									</div>
+								</div>
+							</div>
+						</div><!-- Weather Widget -->
+					</div>
+					<div class="col-md-6">
+						<div class="widget">
+							<div class="widget-title">
+								<h3>Task Stats</h3>
+								<span> tasks here...</span>
+								<div class="widget-controls">
+									<span class="close-content"><i class="fa fa-trash-o"></i></span>
+									<span class="expand-content"><i class="fa fa-expand"></i></span>
+									<span class="refresh-content"><i class="fa fa-refresh"></i></span>
+								</div><!-- Widget Controls -->
+							</div>
+							<div class="task-graph">
+								<div class="task-graph-chart">
+									<span class="pie-colours">4,7,6,5</span>
+									<i>Task Completed</i>
+									<h3>6789</h3>
+								</div>
+								<ul>
+									<li>Remaining<span>789</span></li>
+									<li>In Progress<span>8,230</span></li>
+									<li>Budget<span>$78.6M</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="widget">
+							<div class="social-activities">
+								<ul>
+									<li><i class="ti-facebook" style="background-color:#417db5;"></i><h3>89k</h3><span>FRIENDS</span></li>
+									<li><i class="ti-google" style="background-color:#fb3434;"></i><h3>785</h3><span>FOLLOWERS</span></li>
+									<li><i class="ti-linkedin" style="background-color:#3f73a4;"></i><h3>670+</h3><span>CONTACTS</span></li>
+									<li><i class="ti-twitter" style="background-color:#5bafff;"></i><h3>456k</h3><span>FOLLOWERS</span></li>
+									<li><i class="ti-soundcloud" style="background-color:#ff973a;"></i><h3>4k</h3><span>FOLLOWERS</span></li>
+									<li><i class="ti-vimeo" style="background-color:#444444;"></i><h3>6,986</h3><span>VIEWS</span></li>
+								</ul>
+								<a href="javascript:void(0)" title="">See all activities</a>
+							</div><!-- Social Activities -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="widget">
+					<div class="my-profile-widget">
+						<div class="profile-widget-head">
+							<h3>Labrina Scholar</h3>
+							<i>Creative Designer</i>
+							<span><img alt="" src="http://placehold.it/100x100"></span>
+						</div>
+						<h4>@labrina_scholar</h4>
+						<span class="red-bg"><i class="ti-location-pin"></i>San Francisco</span>
+						<p>Print this page to PDF for te completet of vectors. Or to use othe the Font Aweo Awesome</p>
+						<a title="" href="javascript:void(0)">http://themeforest.net</a>
+						<ul class="social-btns">
+							<li><a href="javascript:void(0)" title=""><i class="ti-facebook"></i></a></li>
+							<li><a href="javascript:void(0)" title=""><i class="ti-google"></i></a></li>
+							<li><a href="javascript:void(0)" title=""><i class="ti-twitter"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="widget blank no-padding">
+					<div class="panel panel-default work-progress-table">
+						<!-- Default panel contents -->
+						<div class="panel-heading">Lanbrina Scholar<i>My Work Progress</i>
+							<div class="dropdown rounded">
+								<button aria-expanded="true" data-toggle="dropdown" id="dropdownMenu1" type="button" class="btn btn-default dropdown-toggle">
+									Options
+									<span class="caret"></span>
+								</button>
+								<ul aria-labelledby="dropdownMenu1" role="menu" class="dropdown-menu">
+									<li role="presentation"><a href="#/mail/inbox" tabindex="-1" role="menuitem">My Mail</a></li>
+									<li role="presentation"><a href="#/extra/invoice" tabindex="-1" role="menuitem">Invoice</a></li>
+									<li role="presentation"><a href="#/personal/profile" tabindex="-1" role="menuitem">Profile</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- Table -->
+						<table class="table">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Name</th>
+									<th>Progress</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Mark</td>
+									<td>
+										<div class="progress">
+											<div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+												<span>60%</span>
+											</div>
+										</div>
+									</td>
+									<td>Pending..</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Jacob</td>
+									<td>
+										<div class="progress">
+											<div style="width: 80%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="green progress-bar">
+												<span>80%</span>
+											</div>
+										</div>
+									</td>
+									<td>Checking..</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Larry</td>
+									<td>
+										<div class="progress">
+											<div style="width: 40%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="purple progress-bar">
+												<span>40%</span>
+											</div>
+										</div>
+									</td>
+									<td>Working...</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>John Doe</td>
+									<td>
+										<div class="progress">
+											<div style="width: 90%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="purple progress-bar">
+												<span>90%</span>
+											</div>
+										</div>
+									</td>
+									<td>Almost Done</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Brandon Daril</td>
+									<td>
+										<div class="progress">
+											<div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+												<span>60%</span>
+											</div>
+										</div>
+									</td>
+									<td>Pending..</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>Mark</td>
+									<td>
+										<div class="progress">
+											<div style="width: 45%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="45" role="progressbar" class="red progress-bar">
+												<span>45%</span>
+											</div>
+										</div>
+									</td>
+									<td>Pending..</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>Jacob</td>
+									<td>
+										<div class="progress">
+											<div style="width: 89%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="89" role="progressbar" class="green progress-bar">
+												<span>89%</span>
+											</div>
+										</div>
+									</td>
+									<td>Checking..</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- Panel Content -->

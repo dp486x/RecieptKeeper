@@ -11,7 +11,9 @@ const bodyParser = require('body-parser');
 const port = 3333;
 var fs = require('fs');
 var moment = require('moment');
-const storeFilesAtRoot = "~/Documents/Reciepts";
+var util = require('util');
+const host = "";
+const storeFilesAtRoot = "./Reciepts/";
 
 
 
@@ -41,6 +43,7 @@ app.use(morgan('dev', {
 
 var requestTime = function(req, res, next) {
     req.requestTime = moment().format();
+    console.log(util.inspect("got request"));
     next()
 };
 app.use(requestTime);
@@ -50,7 +53,7 @@ app.use('/notify', require('./app/controllers/notifications_controller'));
 // app.use('/user', require('./app/controllers/user_controller'));*/
 
 app.get('/', (req, res) => {
-    res.send("Welcome to the Reciept Keeper");
+    res.send("Welcome to the Reciept Keeper.");
 });
 /*
 //Error Handler when  not found
