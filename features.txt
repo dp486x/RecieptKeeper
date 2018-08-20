@@ -1,0 +1,4 @@
+Implement DB.
+Implement File System in node to store the receipts.
+Front end features:
+ Button to Upload receipt images.

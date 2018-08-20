@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-//const path = require('path');
+const path = require('path');
 const chalk = require('chalk');
 const morgan = require('morgan');
 const route = express.Router();
@@ -14,6 +14,7 @@ var moment = require('moment');
 var util = require('util');
 const host = "";
 const storeFilesAtRoot = "./Reciepts/";
+
 
 
 
@@ -47,10 +48,10 @@ var requestTime = function(req, res, next) {
     next()
 };
 app.use(requestTime);
-/*
+
 app.use('/user', require('./app/controllers/user_controller'));
 app.use('/notify', require('./app/controllers/notifications_controller'));
-// app.use('/user', require('./app/controllers/user_controller'));*/
+app.use('/reciept', require('./app/controllers/reciept_controller'));
 
 app.get('/', (req, res) => {
     res.send("Welcome to the Reciept Keeper.");
