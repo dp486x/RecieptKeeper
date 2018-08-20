@@ -20,6 +20,16 @@ const storeFilesAtRoot = "./Reciepts/";
 
 //DB Connection
 //mongoose.connect('mongodb://' + creds.mlab.dbUser + ':' + creds.mlab.dbPassword + '@' + creds.mlab.url + ':' + creds.mlab.port + '/' + creds.mlab.database);
+var hostname = 'localhost';
+mongoose.connect('mongodb://' + hostname + ':27017/reciepts').then(
+    () => {
+        console.log('connected to mongoDB at ' + hostname + ':27017')
+    },
+    err => {
+        console.log('failed connection')
+    }
+);
+
 
 //Static files path
 app.use(express.static(__dirname + '/'));
@@ -43,8 +53,9 @@ app.use(morgan('dev', {
 }));
 
 var requestTime = function(req, res, next) {
-    req.requestTime = moment().format();
-    console.log(util.inspect("got request"));
+    console.log(chalk.green("================================================="));
+    req.requestTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+    console.log(util.inspect("got "+req.method+" request"));
     next()
 };
 app.use(requestTime);
