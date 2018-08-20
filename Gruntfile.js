@@ -213,7 +213,7 @@ module.exports = function(grunt) {
                 tasks: ['less', 'cssmin', 'jsbeautifier']
             },
             js: {
-                files: ['public/src/js/**/*.js', 'public/src/js/*.js', 'server.js'],
+                files: ['public/src/js/**/*.js', 'public/src/js/*.js', 'server.js', 'app/**/*.js'],
                 tasks: [ /*'jshint',*/ 'uglify', 'jsbeautifier']
             },
             html: {
@@ -232,7 +232,7 @@ module.exports = function(grunt) {
         // watch our node server for changes
         nodemon: {
             dev: {
-                script: 'server.js'
+                script: 'server.js','app/**/*.js'
             }
         },
 
