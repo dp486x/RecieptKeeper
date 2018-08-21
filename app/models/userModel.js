@@ -27,22 +27,20 @@ var User = mongoose.model('User', userSchema);
 // make this available to our users in our Node applications
 module.exports = User;
 
-
-// ({
-//   userNumber: Number,
-//   firstName: String,
-//   userName: { type: String, required: true, unique: true },
-//   password: { type: String, required: true },
-//   isAdmin: Boolean,
-//   gender: String,
-//   userImageLocation: String,
-//   location: String,
-//   meta: {
-//     mobile: Number,
-//     email: String,
-//     age: Number,
-//     website: String
-//   },
-//   created_at: Date,
-//   updated_at: Date
-// });
+// { "meta":
+//    { "mobile": 4054016751,
+//      "email": "poladinesh42@gmail.com",
+//      "age": 27,
+//      "website": "not yet" },
+//   "userNumber": 1,
+//   "firstName": "Dinesh Kumar",
+//   "userName": "poladinesh420@gmail.com",
+//   "password": "dinesh",
+//   "isAdmin": true,
+//   "gender": "Male",
+//   "userImageLocation": "google",
+//   "location": "drive",
+//   "created_at": 1534883691468,
+//   "updated_at": 1534883691468
+//
+// }

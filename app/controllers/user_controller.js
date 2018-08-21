@@ -28,36 +28,37 @@ app.route('/')
     // create a new user called chris
     // req.user = new User(req.body);
     console.log(chalk.green("POST request at user post"));
-console.log(req.body);
-    // var newUser = new User({
-    //   userNumber: 1,
-    //   firstName: "Dinesh Kumar",
-    //   userName: "poladinesh423@gmail.com",
-    //   password: "dinesh",
-    //   isAdmin: true,
-    //   gender: "M",
-    //   userImageLocation: "google",
-    //   location: "drive",
-    //   meta: {
-    //     mobile: 4054016751,
-    //     email: "poladinesh42@gmail.com",
-    //     age: 27,
-    //     website: "not yet"
-    //   },
-    //   created_at: Date.now(),
-    //   updated_at: Date.now()
-    // });
-    // newUser.save(function(err, newUser) {
-    //   if (err) {
-    //     // return console.error(err);
-    //     res.json(err);
-    //   } else if (newUser){
-    //     res.send('User saved successfully!'+ newUser);
-    //   }
-    //
-    //   console.log(chalk.blue("SUCCESS: " + newUser));
-    //   next();
-    // });
+    console.log(req.body);
+    newUserRequest = req.body;
+    var newUser = new User({
+      userNumber: 1,
+      firstName: newUserRequest.firstName,
+      userName: newUserRequest.userName,
+      password: newUserRequest.password, //Hash the password
+      isAdmin: newUserRequest.isAdmin,
+      gender: newUserRequest.gender,
+      userImageLocation: newUserRequest.userImageLocation,
+      location: newUserRequest.location,
+      meta: {
+        mobile: newUserRequest.meta.mobile,
+        email: newUserRequest.meta.email,
+        age: newUserRequest.meta.age,
+        website: newUserRequest.meta.website
+      },
+      created_at: newUserRequest.created_at,
+      updated_at: newUserRequest.updated_at
+    });
+    newUser.save(function(err, newUser) {
+      if (err) {
+        // return console.error(err);
+        res.json(err);
+      } else if (newUser){
+        res.send('User saved successfully!'+ newUser);
+      }
+
+      console.log(chalk.blue("SUCCESS: " + newUser));
+      next();
+    });
 
   })
 
