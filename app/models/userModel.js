@@ -18,8 +18,8 @@ var userSchema = new Schema({
     age: Number,
     website: String
   },
-  created_at: Date,
-  updated_at: Date
+  created_at: Number,
+  updated_at: Number
 });
 
 var User = mongoose.model('User', userSchema);

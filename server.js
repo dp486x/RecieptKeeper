@@ -14,6 +14,7 @@ var moment = require('moment');
 var util = require('util');
 const host = "";
 const storeFilesAtRoot = "./receipts/";
+const dataBase = "receiptKeeper";
 
 
 
@@ -21,7 +22,7 @@ const storeFilesAtRoot = "./receipts/";
 //DB Connection
 //mongoose.connect('mongodb://' + creds.mlab.dbUser + ':' + creds.mlab.dbPassword + '@' + creds.mlab.url + ':' + creds.mlab.port + '/' + creds.mlab.database);
 var hostname = 'localhost';
-mongoose.connect('mongodb://' + hostname + ':27017/receipts').then(
+mongoose.connect('mongodb://' + hostname + ':27017/'+dataBase).then(
     () => {
         console.log('connected to mongoDB at ' + hostname + ':27017')
     },
