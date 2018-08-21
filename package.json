@@ -1,7 +1,7 @@
 {
-  "name": "recieptkeeper",
+  "name": "receiptkeeper",
   "version": "1.0.0",
-  "description": "upload, store and manage your reciepts.",
+  "description": "upload, store and manage your receipts.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

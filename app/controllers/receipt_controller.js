@@ -14,13 +14,13 @@ app.use(function timeLog(req, res, next) {
 
 app.route('/')
   .get((req, res, next) => {
-    res.send('Information About the Reciept/s.');
+    res.send('Information About the receipt/s.');
   })
 
   .post((req, res, next) => {
     // create a new user called chris
     // req.user = new User(req.body);
-    console.log(chalk.green("POST request at Reciept post"));
+    console.log(chalk.green("POST request at receipt post"));
     // console.log(req.body);
 
     next();
@@ -34,15 +34,15 @@ app.route('/')
     //   res.send('User saved successfully!');
     //   console.log('User saved successfully!');
     // });
-    res.send('Reciept saved successfully!');
+    res.send('receipt saved successfully!');
   })
 
   .put((req, res, next) => {
-    res.send('Reciept updated successfully');
+    res.send('receipt updated successfully');
   })
 
   .delete((req, res, next) => {
-    res.send('Reciept Deleted successfully');
+    res.send('receipt Deleted successfully');
   })
 
 

@@ -13,7 +13,7 @@ var fs = require('fs');
 var moment = require('moment');
 var util = require('util');
 const host = "";
-const storeFilesAtRoot = "./Reciepts/";
+const storeFilesAtRoot = "./receipts/";
 
 
 
@@ -21,7 +21,7 @@ const storeFilesAtRoot = "./Reciepts/";
 //DB Connection
 //mongoose.connect('mongodb://' + creds.mlab.dbUser + ':' + creds.mlab.dbPassword + '@' + creds.mlab.url + ':' + creds.mlab.port + '/' + creds.mlab.database);
 var hostname = 'localhost';
-mongoose.connect('mongodb://' + hostname + ':27017/reciepts').then(
+mongoose.connect('mongodb://' + hostname + ':27017/receipts').then(
     () => {
         console.log('connected to mongoDB at ' + hostname + ':27017')
     },
@@ -62,10 +62,10 @@ app.use(requestTime);
 
 app.use('/users', require('./app/controllers/user_controller'));
 app.use('/notify', require('./app/controllers/notifications_controller'));
-app.use('/reciepts', require('./app/controllers/reciept_controller'));
+app.use('/receipts', require('./app/controllers/receipt_controller'));
 
 app.get('/', (req, res) => {
-    res.send("Welcome to the Reciept Keeper.");
+    res.send("Welcome to the receipt Keeper.");
 });
 /*
 //Error Handler when  not found

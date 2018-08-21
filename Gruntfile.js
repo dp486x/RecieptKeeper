@@ -76,7 +76,7 @@ module.exports = function(grunt) {
         uglify: {
             // pkg: grunt.file.readJSON('package.json'),
             options: {
-                banner: '/*! <%= "recieptkeeper" %> <%= grunt.template.today("yyyy-mm-dd hh:mm:ss") %> */\n'
+                banner: '/*! <%= "receiptkeeper" %> <%= grunt.template.today("yyyy-mm-dd hh:mm:ss") %> */\n'
                 // beautify: true
             },
             build: {
