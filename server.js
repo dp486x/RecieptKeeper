@@ -60,9 +60,9 @@ var requestTime = function(req, res, next) {
 };
 app.use(requestTime);
 
-app.use('/user', require('./app/controllers/user_controller'));
+app.use('/users', require('./app/controllers/user_controller'));
 app.use('/notify', require('./app/controllers/notifications_controller'));
-app.use('/reciept', require('./app/controllers/reciept_controller'));
+app.use('/reciepts', require('./app/controllers/reciept_controller'));
 
 app.get('/', (req, res) => {
     res.send("Welcome to the Reciept Keeper.");
