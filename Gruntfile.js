@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         esversion: 6,
         globals: {
           jQuery: true,
-          "$": false, //Ignore $ in jQyery
+          "$": false, //Ignore $ in jQuery
           angular: false
         }
       },
@@ -29,11 +29,12 @@ module.exports = function(grunt) {
         'server.js'
       ]
       // afterconcat:['public/dist/js/app.min.js']
+      // jshint ignore:line  for JSHINT ignoring that line
     },
 
     // Beautifies the Html files, CSS files and JS files
     jsbeautifier: {
-      files: ["app/**/*.js", "public/src/js/services/*.js", "public/src/css/*.css", "server.js"],
+      files: ["app/**/*.js", "server.js", 'package.json', 'Gruntfile.js' /*"public/src/js/services/*.js", "public/src/css/*.css"*/ ],
       options: {
         // config: "path/to/configFile",
         html: {
@@ -127,8 +128,8 @@ module.exports = function(grunt) {
                                 captureFile: 'coverage/coverage.html'
                             }
                         }*!/
-        },
-*/
+        },*/
+
     mochaTest: {
       specs: {
         options: {
@@ -144,7 +145,8 @@ module.exports = function(grunt) {
     mocha_istanbul: {
       coverage: {
         // src: 'tests/mocha_chai/test-server.js', // a folder works nicely
-        src: 'tests/mocha_chai/sample_test.js',
+        // src: 'tests/mocha_chai/sample_test.js',
+        src: 'server.js',
         options: {
           // mask: '*.spec.js'
         }
@@ -251,25 +253,25 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify-es');
-  //  grunt.loadNpmTasks('grunt-contrib-less');
-  //  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks("grunt-jsbeautifier");
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadNpmTasks('grunt-concurrent');
-  //  grunt.loadNpmTasks('grunt-mocha');
   //  grunt.loadNpmTasks('grunt-mocha-istanbul');
+  //  grunt.loadNpmTasks('grunt-contrib-less');
+  //  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  //  grunt.loadNpmTasks('grunt-mocha');
   // grunt.loadNpmTasks('grunt-mocha-chai-sinon');
-  grunt.loadNpmTasks("grunt-jsbeautifier");
   //  grunt.loadNpmTasks('grunt-protractor-runner');
   //  grunt.loadNpmTasks('grunt-mocha-test');
 
-
-  grunt.registerTask('default', [ /*'less', 'cssmin', */ 'jshint', 'uglify', 'jsbeautifier', /*'mocha-chai-sinon',*/ /*'mocha_istanbul',*/ 'concurrent']);
-  //grunt.registerTask('Test Node', ['mochaTest']);
-  //grunt.registerTask('Coverage', ['mocha_istanbul']);
+  grunt.registerTask('Hint', ['jshint']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'jsbeautifier', 'concurrent' /*'less', 'cssmin', */ /*'mocha-chai-sinon',*/ /*'mocha_istanbul',*/ ]);
+  grunt.registerTask('Coverage', ['mocha_istanbul']);
+  //grunt.registerTask('Test Node', ['mochaTest']);  
   // grunt.registerTask('Open Coverage', [start coverage/lcov-report/index.html]);
   //grunt.registerTask('Test Angular', ['protractor']);
-  grunt.registerTask('Hint', ['jshint']);
+
 
 
 };
