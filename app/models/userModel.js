@@ -4,22 +4,29 @@ var Schema = mongoose.Schema;
 
 // create a schema
 var userSchema = new Schema({
-  userNumber: Number,
-  firstName: String,
-  userName: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  gender: String,
-  isAdmin: Boolean,
-  userImageLocation: String,
-  location: String,
-  meta: {
-    mobile: Number,
-    email: String,
-    age: Number,
-    website: String
-  },
-  created_at: Number,
-  updated_at: Number
+    userNumber: Number,
+    firstName: String,
+    userName: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    gender: String,
+    isAdmin: Boolean,
+    userImageLocation: String,
+    location: String,
+    meta: {
+        mobile: Number,
+        email: String,
+        age: Number,
+        website: String
+    },
+    created_at: Number,
+    updated_at: Number
 });
 
 var User = mongoose.model('User', userSchema);

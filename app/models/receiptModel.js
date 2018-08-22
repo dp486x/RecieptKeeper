@@ -1,33 +1,33 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var moment = require('moment');
+// var moment = require('moment');
 
 // create a schema
 var receiptSchema = new Schema({
-  receiptNumber: Number, // receipt # until date
-  receiptName: String, //receiptFrom+receiptMonth-receiptDate-receiptYear
-  businessName: String, // company name
-  businessId: Number, //company ID in the DB
-  receiptFullDate: Number, //Date.now()
-  receiptYear: Number, //moment().format('YYYY')
-  receiptMonth: String, //moment().format("MMM")
-  receiptDate: Number, //moment().format('dd');
-  receiptDay: String, //moment().format('dddd');
-  subTotal: String, // amount before tax
-  tax: Boolean, // total tax
-  total: Boolean, //amount with Tax
-  receiptLocation: String,//receipts/receiptYear/receiptMonth/receiptDate/receiptName.format
-  category: String, // category to which receipt belongs to(grocery, gas, clothing)
-  savedBy: String, // User who saved the receipt
-  modifiedBy: String, //User modified the receipt
-  created_at: Date, // receipt created on
-  updated_at: Date.now() // receipt updated on
-  // discounts:{
-  //   actualPrice: Number;
-  //   discountPrice: Number;
-  //   discountPercent: Number;
-  //
-  // }
+    receiptNumber: Number, // receipt # until date
+    receiptName: String, //receiptFrom+receiptMonth-receiptDate-receiptYear
+    businessName: String, // company name
+    businessId: Number, //company ID in the DB
+    receiptFullDate: Number, //Date.now()
+    receiptYear: Number, //moment().format('YYYY')
+    receiptMonth: String, //moment().format("MMM")
+    receiptDate: Number, //moment().format('dd');
+    receiptDay: String, //moment().format('dddd');
+    subTotal: String, // amount before tax
+    tax: Boolean, // total tax
+    total: Boolean, //amount with Tax
+    receiptLocation: String, //receipts/receiptYear/receiptMonth/receiptDate/receiptName.format
+    category: String, // category to which receipt belongs to(grocery, gas, clothing)
+    savedBy: String, // User who saved the receipt
+    modifiedBy: String, //User modified the receipt
+    created_at: Date, // receipt created on
+    updated_at: Date.now() // receipt updated on
+    // discounts:{
+    //   actualPrice: Number;
+    //   discountPrice: Number;
+    //   discountPercent: Number;
+    //
+    // }
 });
 
 var receipt = mongoose.model('receipt', receiptSchema);

@@ -1,6 +1,6 @@
-const express = require('express')
+const express = require('express');
 const app = express();
-const chalk = require('chalk');
+const chalk = require('chalk'); // jshint ignore:line
 // const User = require('./../models/userModel');
 // const creds = require('../../creds.json');
 // const accountSid = creds.sms.accountSid; // Your Account SID from www.twilio.com/console
