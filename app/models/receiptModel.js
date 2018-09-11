@@ -11,17 +11,17 @@ var receiptSchema = new Schema({
     receiptFullDate: Number, //Date.now()
     receiptYear: Number, //moment().format('YYYY')
     receiptMonth: String, //moment().format("MMM")
-    receiptDate: Number, //moment().format('dd');
+    receiptDate: String, //moment().format('dd');
     receiptDay: String, //moment().format('dddd');
-    subTotal: String, // amount before tax
-    tax: Boolean, // total tax
-    total: Boolean, //amount with Tax
+    subTotal: Number, // amount before tax
+    tax: Number, // total tax
+    total: Number, //amount with Tax
     receiptLocation: String, //receipts/receiptYear/receiptMonth/receiptDate/receiptName.format
     category: String, // category to which receipt belongs to(grocery, gas, clothing)
     savedBy: String, // User who saved the receipt
     modifiedBy: String, //User modified the receipt
-    created_at: Date, // receipt created on
-    updated_at: Date.now() // receipt updated on
+    created_at: Number, // receipt created on
+    updated_at: Number // receipt updated on
     // discounts:{
     //   actualPrice: Number;
     //   discountPrice: Number;
@@ -30,7 +30,7 @@ var receiptSchema = new Schema({
     // }
 });
 
-var receipt = mongoose.model('receipt', receiptSchema);
+var receipt = mongoose.model('Receipt', receiptSchema);
 
 // make this available to our users in our Node applications
 module.exports = receipt;

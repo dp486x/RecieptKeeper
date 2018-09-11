@@ -12,3 +12,7 @@ Front end features:
 
 if Business does not exists in the DB insert the Business and get the ID to attach it to receipt db.
 Admin had permission to add the new categories.
+
+
+When the OCR is implemented
+use Multer's "MemoryStorage" if needed until OCR returns the values.
