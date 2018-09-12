@@ -6,7 +6,7 @@
 ..*passwords table
 
 
-<H2>Implement File System in node to store the receipts.</H2>
+Implement File System in node to store the receipts.: Used Multer
 Front end features:
 ..*Button to Upload receipt images.
 
