@@ -21,7 +21,7 @@ var storage = multer.diskStorage({
             if (err) {
                 return cb(err);
             }
-            cb(null, file.fieldname + "_" + Date.now() + path.extname(file.originalname));
+            cb(null, file.fieldname + "_" + moment().format() + path.extname(file.originalname));
             // cb(null, raw.toString('hex') + path.extname(file.originalname));
         });
     }
