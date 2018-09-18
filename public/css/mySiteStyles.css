@@ -1,0 +1,13 @@
+.direction-rtl: {
+    direction: rtl;
+}
+
+.with-padding-receiptdetails: {
+    float: none;
+}
+
+.</div>.input-group[class*=col-] {
+    float: left;
+    /* padding-right: 0; */
+    padding-left: 0;
+}

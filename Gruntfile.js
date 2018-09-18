@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 
         // Beautifies the Html files, CSS files and JS files
         jsbeautifier: {
-            files: ["app/**/*.js", "server.js", 'package.json', 'Gruntfile.js' /*"public/src/js/services/*.js", "public/src/css/*.css"*/ ],
+            files: ["app/**/*.js", "server.js", 'package.json', 'Gruntfile.js', 'public/partials/*.html', 'public/css/mySiteStyles.css' /*, "public/src/css/*.css"*/ ],
             options: {
                 // config: "path/to/configFile",
                 html: {
@@ -215,8 +215,8 @@ module.exports = function(grunt) {
         // watch css and js files and process the above tasks
         watch: {
             css: {
-                files: ['public/src/css/**/*.css', 'public/src/css/*.css'],
-                tasks: ['less', 'cssmin', 'jsbeautifier']
+                files: ['public/src/css/**/*.css', 'public/css/*.css'],
+                tasks: [ /*'less', 'cssmin',*/ 'jsbeautifier']
             },
             js: {
                 files: ['server.js', 'app/**/*.js', 'grunt.js', 'public/js/*.js', 'public/js/**/*.js'],
