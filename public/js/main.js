@@ -10,10 +10,10 @@
 /**
  * Configure the Routes
  */
- var app = angular.module('tutorialWebApp', ['ngRoute']).
+ var app = angular.module('receiptKeeper', ['ngRoute']).
  config(['$routeProvider', function($routeProvider) {
     $routeProvider
-    .when("/", {templateUrl: "partials/home.html", controller: "HomeCtrl"})
+    .when("/", {templateUrl: "public/partials/home.html", controller: "HomeCtrl"})
     .when("/dashboard-2", {templateUrl: "partials/home2.html", controller: "HomeTwoCtrl"})
     .when("/dashboard-3", {templateUrl: "partials/home3.html", controller: "HomeThreeCtrl"})
     .when("/dashboard-4", {templateUrl: "partials/home4.html", controller: "HomeFourCtrl"})
@@ -282,7 +282,7 @@ controller('InboxCtrl', ['$scope', '$location', function($scope, $location) {
   $('.close-reading').on('click', function(){
     $('.read-email').removeClass('reading');
 });
-  
+
   //**** Check All mail ****//
   $('#checkAll').on('click', function(){
     $('.checkall:checkbox').not(this).prop('checked', this.checked);
@@ -407,7 +407,7 @@ controller('HomeFourCtrl', ['$scope', '$location', function($scope, $location) {
     };
 
 
-    function listFilter(searchDir, list) { 
+    function listFilter(searchDir, list) {
       var form = $("<form>").attr({"class":"filterform","action":"#"}),
       input = $("<input>").attr({"class":"filterinput","type":"text","placeholder":"Live Search Mails"});
       $(form).append(input).appendTo(searchDir);
@@ -825,7 +825,7 @@ controller('HomeTwoCtrl', ['$scope', '$location', function($scope, $location) {
   }
   $('#chart').length && $.plot($('#chart'), [{
       data: d1
-  }], 
+  }],
   {
       series: {
         lines: {
@@ -927,7 +927,7 @@ controller('HomeCtrl', ['$scope', '$location', function($scope, $location) {
           $('.side-menu-sec').removeClass('slide-out');
           $('.menu-options').removeClass('active');
         }
-    }); 
+    });
 
   // Get Header Height //
   var stick = $('.top-bar').height();
@@ -965,7 +965,7 @@ controller('HomeCtrl', ['$scope', '$location', function($scope, $location) {
 
   $('.search-dashboard .responsive-search').on('click', function(){
     $('.search-dashboard').toggleClass('active');
-});  
+});
 
   //***** Clients lists Scroll *****//
   $('#header-scroll').slimScroll({
@@ -1021,7 +1021,7 @@ $("#toolFullScreen").on("click",function() {
   //***** Live Chats *****//
   $('#live-chat .chat-header').on('click', function(){
     $('.chat').slideToggle();
-}); 
+});
 
     //***** Clients lists Scroll *****//
     $('.chat-history').slimScroll({
@@ -1096,7 +1096,7 @@ setInterval(generate, 2000);
 }
 $('#chart').length && $.plot($('#chart'), [{
     data: d1
-}], 
+}],
 {
     series: {
       lines: {
@@ -1232,7 +1232,7 @@ controller('SyntaxCtrl', ['$scope', '$location', function($scope, $location) {
   $.SyntaxHighlighter.init({
       'wrapLines':false,
       'theme': 'balupton'
-  }); 
+  });
 
   // Get Header Height //
   var sticks = $('.top-bar').height();
@@ -1683,7 +1683,7 @@ controller('WidgetsCtrl', ['$scope', '$location', function($scope, $location) {
       return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
   };
 
-  function listFilter(searchDir, list) { 
+  function listFilter(searchDir, list) {
     var form = $("<form>").attr({"class":"filterform","action":"#"}),
     input = $("<input>").attr({"class":"filterinput","type":"text","placeholder":"Live Search Mails"});
     $(form).append(input).appendTo(searchDir);
@@ -1796,7 +1796,7 @@ controller('WidgetsCtrl', ['$scope', '$location', function($scope, $location) {
     railOpacity : '0.1',
     size: '2px'
 });
-  
+
     //***** Comment Scroll *****//
     $('#comment-scroll').slimScroll({
         height: '430px',
@@ -1838,7 +1838,7 @@ controller('WidgetsCtrl', ['$scope', '$location', function($scope, $location) {
 }
 $('#chart').length && $.plot($('#chart'), [{
     data: d1
-}], 
+}],
 {
     series: {
       lines: {
@@ -2307,7 +2307,7 @@ controller('SliderCtrl', ['$scope', '$location', function($scope, $location) {
       barWidth: 5,
       barColor: '#806fff',
       negBarColor: '#806fff'});
-  
+
   //**** My Balance ****//
   $("#my-balance").sparkline([4,5,6,7,8,6,5,6,7,4], {
       type: 'bar',
@@ -2416,13 +2416,13 @@ controller('FormCtrl', ['$scope', '$location', function($scope, $location) {
        $(this).removeClass('active');
     });
 
-  // Smart Wizard   
+  // Smart Wizard
   $('#wizard').smartWizard();
 
   function onFinishCallback(){
       $('#wizard').smartWizard('showMessage','Finish Clicked');
   //alert('Finish Clicked');
-}  
+}
 
   // Get Header Height //
   var sticks = $('.top-bar').height();
@@ -2974,7 +2974,7 @@ setInterval( function() {
 }
 $('#chart').length && $.plot($('#chart'), [{
     data: d1
-}], 
+}],
 {
     series: {
       lines: {
@@ -3038,7 +3038,7 @@ $("#sparkline").sparkline([5,9,3,-6,10,10,-6,-10,-5,-9,-3,6,10,6,5,7,9,10,6,5,-7
     }
     $('#chart').length && $.plot($('#chart2'), [{
         data: d1
-    }], 
+    }],
     {
         series: {
           lines: {
@@ -3297,7 +3297,7 @@ controller('CropCtrl', ['$scope', '$location', function($scope, $location) {
   var jcrop_api, boundx, boundy;
 
   // destroy Jcrop if it is existed
-  if (typeof jcrop_api != 'undefined') 
+  if (typeof jcrop_api != 'undefined')
       jcrop_api.destroy();
 
   // initialize Jcrop
@@ -3340,7 +3340,7 @@ controller('CropCtrl', ['$scope', '$location', function($scope, $location) {
       barWidth: 5,
       barColor: '#806fff',
       negBarColor: '#806fff'});
-  
+
   //**** My Balance ****//
   $("#my-balance").sparkline([4,5,6,7,8,6,5,6,7,4], {
       type: 'bar',
@@ -3520,7 +3520,7 @@ controller('GoogleCtrl', ['$scope', '$location', function($scope, $location) {
       barColor: '#6d6d6d',
       negBarColor: '#6d6d6d'});
 
-}]); 
+}]);
 
 app.controller('PageCtrl', function (/*$scope, $location, $http*/) {
 
@@ -3566,10 +3566,10 @@ app.controller('PageCtrl', function (/*$scope, $location, $http*/) {
 });
 
   // Activates Tooltips for Social Links
-  $('[data-toggle="tooltip"]').tooltip(); 
+  $('[data-toggle="tooltip"]').tooltip();
 
-  // Activates Popovers for Social Links 
-  $('[data-toggle="popover"]').popover();  
+  // Activates Popovers for Social Links
+  $('[data-toggle="popover"]').popover();
 
   // Activates Tooltips for Social Links
   $('.tooltip-social').tooltip({
@@ -3613,7 +3613,7 @@ app.controller('PageCtrl', function (/*$scope, $location, $http*/) {
         $(this).toggleClass('active').next().slideDown('fast');
     }
 });
-  
+
   $('#accordian2 .content').hide();
   $('#accordian2 h2:first').addClass('active').next().slideDown('fast');
   $('#accordian2 h2').on('click', function(){
@@ -3622,7 +3622,7 @@ app.controller('PageCtrl', function (/*$scope, $location, $http*/) {
         $(this).toggleClass('active').next().slideDown('fast');
     }
 });
-  
+
   $('#accordian3 .content').hide();
   $('#accordian3 h2:first').addClass('active').next().slideDown('fast');
   $('#accordian3 h2').on('click', function(){
@@ -3633,7 +3633,7 @@ app.controller('PageCtrl', function (/*$scope, $location, $http*/) {
 });
 
   ohSnap('Oh Snap! I cannot process your card...', {
-    color: 'red', 
+    color: 'red',
     icon: 'fa fa-flash',
     duration: '2000000000'
 });
@@ -3669,7 +3669,7 @@ app.controller('PageCtrl', function (/*$scope, $location, $http*/) {
   $("#popoverthree").popover({ trigger: "hover" });
   $("#popoverfour").popover({ trigger: "hover" });
 
-  /*=================== Parallax ===================*/   
+  /*=================== Parallax ===================*/
   $('.parallax').scrolly({bgParallax: true});
 
   var icons = new Skycons({"color": "white"});
@@ -3684,6 +3684,6 @@ app.controller('PageCtrl', function (/*$scope, $location, $http*/) {
   icons.play();
 
 
-  
+
 
 });

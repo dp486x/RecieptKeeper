@@ -219,11 +219,11 @@ module.exports = function(grunt) {
                 tasks: ['less', 'cssmin', 'jsbeautifier']
             },
             js: {
-                files: ['server.js', 'app/**/*.js', 'grunt.js'],
+                files: ['server.js', 'app/**/*.js', 'grunt.js', 'public/js/*.js', 'public/js/**/*.js'],
                 tasks: ['jshint', 'uglify', 'jsbeautifier']
             },
             html: {
-                files: ['*.html', 'public/src/templates/*.html'],
+                files: ['*.html', 'public/templates/*.html', 'public/partials/*.html'],
                 tasks: ['uglify', 'jsbeautifier']
             }
             /*,
