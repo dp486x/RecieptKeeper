@@ -911,6 +911,18 @@ $("#pie3").sparkline([1,1,2,3,2], {
 // Home Controller
 controller('HomeCtrl', ['$scope', '$location', function($scope, $location) {
 
+  $(function() {
+    $('#datetimepicker4').datetimepicker({
+      // defaultDate: new Date(),
+    format: 'DD/MMM/YYYY',
+    });
+    $('#datetimepicker3').datetimepicker({
+                    format: 'hh:mm:ss A'
+                });
+  });
+// $("#datetimepicker4").on('click', function(){
+// $('#datetimepicker4').datetimepicker();
+//               });
         //**** Slide Panel Toggle ***//
     $(".open-panel").on('click', function(){
        $(".slide-panel").addClass('active');
